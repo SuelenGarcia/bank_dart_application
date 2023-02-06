@@ -5,7 +5,7 @@ class CreditCardModel implements CardModel {
   String cvv;
 
   @override
-  String cardFlag;
+  String flag;
 
   @override
   String cardName;
@@ -21,7 +21,7 @@ class CreditCardModel implements CardModel {
 
   CreditCardModel(
       {required this.cvv,
-      required this.cardFlag,
+      required this.flag,
       required this.cardName,
       required this.cardNumber,
       required this.validThru,

@@ -1,3 +1,11 @@
+import 'package:bank_dart_application/validations/full_name_validation.dart';
+import '../models/users/user_model.dart';
+import 'package:bank_dart_application/inputs/user_inputs.dart';
+
+void main() {
+  dateTimeCard();
+}
+
 String? validThruValidation(DateTime value) {
   DateTime currentDate = DateTime.now();
 
@@ -11,7 +19,8 @@ String? validThruValidation(DateTime value) {
 DateTime generateValidThruCard() {
   final currentDate = DateTime.now();
 
-  final validThru = currentDate.copyWith(year: currentDate.year + 10);
+  final validThru =
+      DateTime(currentDate.year + 10, currentDate.month, currentDate.day);
 
   return validThru;
 }
@@ -39,8 +48,5 @@ String? dateTimeCard() {
   if (validthruDateTime.isAfter(currentDate)) {
     print('Maior a data atual');
   }
-
-  print('O nome do cartão ficou: Whatever');
-
   return null;
 }
