@@ -6,8 +6,8 @@ class UserModel {
   String cpf;
   String password;
   String telephone;
-  double? monthlyIncome;
-  // UserAddressModel address;
+  String? monthlyIncome;
+  UserAddressModel address;
 
   UserModel({
     required this.name,
@@ -16,6 +16,6 @@ class UserModel {
     required this.password,
     required this.telephone,
     this.monthlyIncome,
-    // required this.address,
+    required this.address,
   });
 }

@@ -1,10 +1,10 @@
 class UserAddressModel {
   String address;
-  int addressNumber;
+  String addressNumber;
   String neighborhood;
   String city;
   String state;
-  int cep;
+  String cep;
   String? complementAddress;
 
   UserAddressModel({

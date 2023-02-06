@@ -2,7 +2,7 @@ String? addressValidation(address) {
   if (address == null || address.trim().isEmpty) {
     return 'Esse campo é obrigatório!';
   }
-  bool isValidRegex = RegExp(r'^([A-Za-záàâãéèêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ](\ ?))+([A-Za-záàâãéèêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ]$)?').hasMatch(address);
+  bool isValidRegex = RegExp(r'^([A-Za-záàâãéèêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ]{2,}(\ ?))+([A-Za-záàâãéèêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ]{2,}$)').hasMatch(address);
   if (!isValidRegex) {
     return 'Por favor, insira um endereço válido!';
   }

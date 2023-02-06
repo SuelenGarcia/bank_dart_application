@@ -61,7 +61,7 @@ bool cpfEleventhDigitValidator(String cpf) {
 String? cpfValidation(String? cpf) {
   final cpfValidationFormat = cpfValidationRegex(cpf!);
   if (cpfValidationFormat != null) {
-    return 'Formato de cpf inválido!';
+    return cpfValidationRegex(cpf);
   }
   if (cpfTenthDigitValidator(cpf) != true) {
     return 'Dígitos verificadores inválidos. Por favor, insira um cpf válido!';

@@ -5,14 +5,14 @@ String? customPrint({
   required String successMessage,
   required String? Function(String?) validator,
 }){
-  stdout.write(inputMessage);
+  stdout.writeln(inputMessage);
   
   String? value = stdin.readLineSync();
   String? validMessage = validator(value);
   
   while (validMessage != null) {
     stdout.writeln(validMessage);
-    stdout.write(inputMessage);
+    stdout.writeln(inputMessage);
     value = stdin.readLineSync();
     validMessage = validator(value);
   }
