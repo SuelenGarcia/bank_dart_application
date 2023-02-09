@@ -37,9 +37,9 @@ String validateExpirationCard() {
   DateTime currentDate = DateTime.now();
   String validThru = generateValidThruCard();
   String formattedDate = formatDate(validThru);
-  DateTime validthruDateTime = DateTime.parse(formattedDate);
+  DateTime validThruDateTime = DateTime.parse(formattedDate);
 
-  if (validthruDateTime.isAfter(currentDate)) {
+  if (validThruDateTime.isAfter(currentDate)) {
     return 'Maior que a data atual';
   }
   return 'Menor que a data atual';

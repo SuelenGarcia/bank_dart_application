@@ -2,7 +2,7 @@ import 'package:bank_dart_application/models/users/user_address_model.dart';
 import '../helper/custom_print.dart';
 import '../validations/address_validation.dart';
 
-createUserAdress() {
+UserAddressModel createUserAdress() {
   final addressInput = customPrint(
     inputMessage: 'Por favor, digite sua rua:',
     successMessage: 'Rua cadastrada com sucesso!',

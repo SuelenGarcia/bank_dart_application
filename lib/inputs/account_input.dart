@@ -1,29 +1,29 @@
 import 'dart:io';
+import 'package:bank_dart_application/models/accounts/account_model.dart';
+import 'package:bank_dart_application/models/users/user_model.dart';
 import '../helper/generate_random_digits.dart';
 
-String? currentAccountInput() {
-  accountInput();
-  return null;
-  //emprestimo
-}
-
-String? savingAccountInput() {
-  accountInput();
-  //somente cartão de débito
-  return null;
-}
-
-String? accountInput() {
-  String bank = '051';
-  double balance = 0;
+AccountModel createAccount({required UserModel userModel}) {
   String agency = '';
-  String account = '';
+  String bank = '051';
+  String accountNumber = '';
+  double balance = 0;
+
   stdout.writeln('O código do nosso banco é: $bank');
-  agency = randomDigitsGenerator(7, maxValue : 2);
+  agency = randomDigitsGenerator(7, maxValue: 2);
   stdout.writeln('O número da sua agência: $agency');
-  account = randomDigitsGenerator(7);
-  stdout.writeln('O número da sua conta: $account');
-  stdout
-      .writeln('Conta criada com sucesso! Seu saldo inicial é de R\$$balance');
-  return null;
+  accountNumber = randomDigitsGenerator(7);
+  stdout.writeln('O número da sua conta: $accountNumber');
+  stdout.writeln('Conta criada com sucesso! Seu saldo é de R\$$balance');
+  String userName = userModel.name;
+  stdout.write('A conta ficou em seu nome: $userName');
+
+  AccountModel accountModel = AccountModel(
+    user: userName,
+    agency: agency,
+    bank: bank,
+    accountNumber: accountNumber,
+    balance: balance,
+  );
+  return accountModel;
 }

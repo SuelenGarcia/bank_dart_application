@@ -1,9 +1,5 @@
 import 'dart:io';
 
-void main() {
-  creditCardLimit();
-}
-
 double creditCardLimit() {
   double limit = 0;
   stdout.writeln('Qual a sua renda mensal:');

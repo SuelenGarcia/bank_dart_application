@@ -16,4 +16,3 @@ String? chooseAccountType() {
   }
   return selectedAccount;
 }
-

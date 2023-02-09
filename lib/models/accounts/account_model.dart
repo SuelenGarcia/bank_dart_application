@@ -1,11 +1,11 @@
 import '../users/user_model.dart';
 
-abstract class AccountModel {
-  UserModel user;
+class AccountModel {
+  String user;
   String agency;
   String bank;
   String accountNumber;
-  String balance;
+  double balance;
 
   AccountModel({
     required this.user,
@@ -17,4 +17,5 @@ abstract class AccountModel {
 
   void withdraw() {}
   void deposit() {}
+
 }

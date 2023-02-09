@@ -6,7 +6,7 @@ import 'package:bank_dart_application/models/cards/card_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
 import '../helper/generate_random_digits.dart';
 
-CardModel card({required UserModel userModel}) {
+CardModel createCard({required UserModel userModel}) {
   String flag = 'MasterCard';
 
   stdout.writeln('Seu cartão está pronto! A bandeira é $flag.');

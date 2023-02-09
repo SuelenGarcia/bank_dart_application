@@ -10,32 +10,28 @@ class SavingAccountModel implements AccountModel {
   String agency;
 
   @override
-  String balance;
+  double balance;
 
   @override
   String bank;
 
   @override
-  UserModel user;
+  String user;
 
   CardModel card;
 
-  SavingAccountModel({
-    required this.accountNumber,
-    required this.agency,
-    required this.balance,
-    required this.bank,
-    required this.user,
-    required this.card
-  });
+  SavingAccountModel(
+      {required this.accountNumber,
+      required this.agency,
+      required this.balance,
+      required this.bank,
+      required this.user,
+      required this.card});
 
   @override
-  void deposit() {
-  }
+  void deposit() {}
 
   @override
-  void withdraw() {
-    
-  }
+  void withdraw() {}
   void render() {}
 }
