@@ -29,9 +29,10 @@ class SavingAccountModel implements AccountModel {
       required this.card});
 
   @override
-  void deposit() {}
+  void toDeposit() {}
 
   @override
-  void withdraw() {}
-  void render() {}
+  void toWithdraw() {}
+  
+  void toRender() {}
 }

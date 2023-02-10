@@ -1,8 +1,6 @@
 import 'account_model.dart';
-import '../users/user_model.dart';
 
 class CurrentAccountModel extends AccountModel {
-
   CurrentAccountModel({
     required super.accountNumber,
     required super.agency,
@@ -12,10 +10,9 @@ class CurrentAccountModel extends AccountModel {
   });
 
   @override
-  void deposit() {
-  }
+  void toDeposit() {}
+
   @override
-  void withdraw() {
-  }
-  void loan() {}
+  void toWithdraw() {}
+  void toLoan() {}
 }

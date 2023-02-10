@@ -15,7 +15,7 @@ class AccountModel {
     required this.balance,
   });
 
-  void withdraw() {}
-  void deposit() {}
+  void toWithdraw() {}
 
+  void toDeposit() {}
 }

@@ -11,10 +11,14 @@ AccountModel createAccount({required UserModel userModel}) {
 
   stdout.writeln('O código do nosso banco é: $bank');
   agency = randomDigitsGenerator(7, maxValue: 2);
+
   stdout.writeln('O número da sua agência: $agency');
   accountNumber = randomDigitsGenerator(7);
+
   stdout.writeln('O número da sua conta: $accountNumber');
+
   stdout.writeln('Conta criada com sucesso! Seu saldo é de R\$$balance');
+  
   String userName = userModel.name;
   stdout.write('A conta ficou em seu nome: $userName');
 
