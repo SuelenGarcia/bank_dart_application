@@ -1,9 +1,10 @@
 import 'dart:io';
+import 'package:bank_dart_application/models/accounts/account_model.dart';
 
-String toDeposit() {
+
+String toDeposit({required AccountModel accountModel}) {
   stdout.writeln('||||  DEPÓSITO  ||||');
-  stdout.writeln(
-      'Por favor, digite a quantia que deseja depositar na sua conta:');
+  stdout.writeln('Digite a quantia que deseja depositar na sua conta:');
 
   String? depositInput = stdin.readLineSync();
   if (depositInput == null || depositInput.trim().isEmpty) {
@@ -17,7 +18,7 @@ String toDeposit() {
   if (!isValidValue) {
     stdout.writeln('Valor inválido, digite somente números.');
     depositInput = '0';
-    toDeposit();
+    toDeposit(accountModel: accountModel);
   }
 
   double depositInputDouble = double.parse(depositInput);
@@ -25,7 +26,7 @@ String toDeposit() {
   if (depositInputDouble > 5000) {
     stdout.writeln(
         'Valores acima de R\$5000 não são permitidos. Tente novamente.');
-    toDeposit();
+    toDeposit(accountModel: accountModel);
   }
   String balance = depositInputDouble.toString();
   stdout.writeln('O valor de $balance foi adicionado a sua conta.');

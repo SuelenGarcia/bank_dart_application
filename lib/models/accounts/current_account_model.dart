@@ -7,6 +7,7 @@ class CurrentAccountModel extends AccountModel {
     required super.balance,
     required super.bank,
     required super.user,
+    required super.card,
   });
 
   @override

@@ -3,7 +3,7 @@ import 'package:bank_dart_application/models/accounts/account_model.dart';
 
 double toWithdraw({required AccountModel accountModel}) {
   stdout.writeln('||||  SAQUE  ||||');
-  stdout.writeln('Por favor, digite a quantia que deseja sacar:');
+  stdout.writeln('Digite a quantia que deseja sacar:');
   double withdraw = stdin.readLineSync() as double;
   double balance = accountModel.balance;
 

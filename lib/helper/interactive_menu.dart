@@ -1,9 +1,5 @@
 import 'dart:io';
 
-void main() {
-  interactiveMenu();
-}
-
 String? interactiveMenu() {
   stdout.writeln('Por favor, digite o número da opção desejada:');
   stdout.writeln('(1) - Sacar');
@@ -39,8 +35,7 @@ String? interactiveMenu() {
       print('Sair');
       break;
     default:
-      print(
-          'Opção inválida, tente novamente.');
+      print('Opção inválida, tente novamente.');
       interactiveMenu();
   }
   return null;
