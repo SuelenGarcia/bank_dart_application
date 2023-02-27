@@ -12,4 +12,9 @@ class CardModel {
     required this.cardName,
     required this.validThru,
   });
+
+  @override
+  String toString() {
+    return '$runtimeType(cardNumber: $cardNumber, flag: $flag, cvv: $cvv, cardName: $cardName, validThru: $validThru)';
+  }
 }

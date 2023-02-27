@@ -1,9 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:bank_dart_application/models/cards/card_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
 
 class AccountModel {
-  String user;
+  UserModel user;
   String agency;
   String bank;
   String accountNumber;
@@ -19,7 +18,19 @@ class AccountModel {
     required this.card,
   });
 
-  void toWithdraw() {}
+  double toWithdraw(double withdrawValue) {
+    balance -= withdrawValue;
+    // saldo (atual) = saldo - saque
+    return balance;
+  }
 
-  void toDeposit() {}
+  double toDeposit(double depositValue) {
+    balance += depositValue;
+    return balance;
+  }
+
+  @override
+  String toString() {
+    return '$runtimeType(user: $user, agency: $agency, bank: $bank, accountNumber: $accountNumber, balance: $balance, card: $card)';
+  }
 }

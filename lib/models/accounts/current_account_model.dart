@@ -1,3 +1,4 @@
+import '../cards/credit_card_model.dart';
 import 'account_model.dart';
 
 class CurrentAccountModel extends AccountModel {
@@ -10,10 +11,13 @@ class CurrentAccountModel extends AccountModel {
     required super.card,
   });
 
-  @override
-  void toDeposit() {}
+  double loan({required double inputLoan}) {
+    balance += inputLoan;
+    // saldo (atual) = saldo + emprestimo
+    CreditCardModel creditCard = card as CreditCardModel;
+    creditCard.amountSpent += inputLoan;
+    // valor gasto = valor + empréstimo
+    return balance;
 
-  @override
-  void toWithdraw() {}
-  void toLoan() {}
+  }
 }

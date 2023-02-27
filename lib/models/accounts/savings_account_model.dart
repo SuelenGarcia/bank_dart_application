@@ -1,6 +1,4 @@
 import 'account_model.dart';
-import '../cards/card_model.dart';
-import '../users/user_model.dart';
 
 class SavingsAccountModel extends AccountModel {
 
@@ -12,11 +10,4 @@ class SavingsAccountModel extends AccountModel {
       required super.user,
       required super.card});
 
-  @override
-  void toDeposit() {}
-
-  @override
-  void toWithdraw() {}
-  
-  void toRender() {}
 }

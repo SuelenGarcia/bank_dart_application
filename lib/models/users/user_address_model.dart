@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class UserAddressModel {
   String address;
   String addressNumber;
@@ -16,4 +17,9 @@ class UserAddressModel {
     required this.cep,
     this.complementAddress,
   });
+
+  @override
+  String toString() {
+    return 'UserAddressModel(address: $address, addressNumber: $addressNumber, neighborhood: $neighborhood, city: $city, state: $state, cep: $cep, complementAddress: $complementAddress)';
+  }
 }

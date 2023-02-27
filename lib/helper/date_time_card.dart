@@ -25,11 +25,9 @@ String formatDate(date) {
 
 String generateValidThruCard() {
   final currentDate = DateTime.now();
-  final formatValidThruDate =
-      currentDate.year + currentDate.month + currentDate.day;
-  String addTenYears = formatValidThruDate.toString();
+  int addTenYears = currentDate.year + 10;
   String validThru = '$addTenYears/${currentDate.month}';
-  print(validThru);
+
   return validThru;
 }
 
