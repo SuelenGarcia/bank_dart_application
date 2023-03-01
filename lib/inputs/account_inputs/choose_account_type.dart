@@ -11,6 +11,7 @@ AccountType chooseAccountType() {
     stdout.writeln('Digite o número correspondente a conta:');
     stdout.writeln('(1) - Conta corrente');
     stdout.writeln('(2) - Conta poupança');
+
     input = stdin.readLineSync()!;
   } while (input != '1' && input != '2');
   if (input == '1') {

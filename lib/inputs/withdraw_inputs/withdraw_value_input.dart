@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:bank_dart_application/validations/methods_validation.dart';
+import 'package:bank_dart_application/validations/methods_input_validation.dart';
 import '../../models/accounts/account_model.dart';
 import '../../models/users/user_model.dart';
 

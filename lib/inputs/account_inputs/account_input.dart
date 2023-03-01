@@ -5,7 +5,6 @@ import 'package:bank_dart_application/models/accounts/account_model.dart';
 import 'package:bank_dart_application/models/accounts/current_account_model.dart';
 import 'package:bank_dart_application/models/accounts/savings_account_model.dart';
 import 'package:bank_dart_application/models/cards/card_model.dart';
-import 'package:bank_dart_application/models/cards/credit_card_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
 import '../../helper/generate_random_digits.dart';
 

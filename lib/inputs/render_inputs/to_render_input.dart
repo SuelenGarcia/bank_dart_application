@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:bank_dart_application/helper/access_denied_account_type.dart';
 import 'package:bank_dart_application/models/accounts/account_model.dart';
-import 'package:bank_dart_application/validations/methods_validation.dart';
+import 'package:bank_dart_application/validations/methods_input_validation.dart';
 
 void toRender(AccountModel accountModel) {
 
@@ -26,10 +26,7 @@ void toRender(AccountModel accountModel) {
     stdout.writeln(
         'Você não possui saldo, a simulação será feita com a sua renda mensal.');
     income ??= 0;
-    //     ^ é o mesmo que:
-    //     if (income == null) {
-    //       income = 0;
-    //    }
+
     balance = income;
   }
   if (balance == 0 && income == 0) {

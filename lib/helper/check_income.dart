@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:bank_dart_application/models/users/user_model.dart';
 
-void checkIncome({required UserModel userModel, required double? income}) {
+void checkIncome({required UserModel userModel, required double? income,}) {
   stdout.writeln(
       'Para prosseguir neste menu, precisaremos checar a sua renda mensal. Aguarde..');
   String incomeString = income.toString();

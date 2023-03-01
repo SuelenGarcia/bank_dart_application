@@ -4,7 +4,6 @@ import 'package:bank_dart_application/inputs/card_inputs/credit_payment_input.da
 import 'package:bank_dart_application/inputs/deposit_inputs/to_deposit_input.dart';
 import 'package:bank_dart_application/inputs/withdraw_inputs/to_withdraw_input.dart';
 import 'package:bank_dart_application/models/accounts/account_model.dart';
-import 'package:bank_dart_application/models/accounts/savings_account_model.dart';
 import 'package:bank_dart_application/models/cards/credit_card_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
 import 'card_inputs/debit_payment_input.dart';
@@ -56,8 +55,9 @@ void interactiveStartMenu({
         );
         break;
       case ('6'):
-        if (accountModel is SavingsAccountModel) {
-          stdout.writeln('O seu cartão não possui a função crédito. Retornando ao menu.');
+        if (accountModel.card is! CreditCardModel) {
+          stdout.writeln(
+              'O seu cartão não possui a função crédito. Retornando ao menu.');
         } else {
           creditPaymentInput(
             userModel: userModel,

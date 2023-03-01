@@ -1,15 +1,12 @@
 import 'dart:io';
-import 'package:bank_dart_application/helper/check_current_account.dart';
-import 'package:bank_dart_application/inputs/account_inputs/choose_account_type.dart';
 import 'package:bank_dart_application/models/accounts/account_model.dart';
-import 'package:bank_dart_application/models/accounts/current_account_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
-import '../../validations/methods_validation.dart';
+import '../../validations/methods_input_validation.dart';
 
 double loanValueInput({
   required UserModel userModel,
   required List<double> calcLoanInput,
-  required AccountModel accountModel
+  required AccountModel accountModel,
 }) {
 
   stdout.writeln('||||  EMPRÉSTIMO  ||||');

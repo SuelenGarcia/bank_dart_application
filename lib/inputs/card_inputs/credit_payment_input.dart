@@ -3,7 +3,7 @@ import 'package:bank_dart_application/helper/require_password.dart';
 import 'package:bank_dart_application/models/accounts/account_model.dart';
 import 'package:bank_dart_application/models/cards/credit_card_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
-import 'package:bank_dart_application/validations/methods_validation.dart';
+import 'package:bank_dart_application/validations/methods_input_validation.dart';
 
 void creditPaymentInput({
   required UserModel userModel,
@@ -35,7 +35,6 @@ void creditPaymentInput({
       double limit = creditCardModel.limit - paymentValue!;
 
       double amountSpent = creditCardModel.amountSpent += paymentValue;
-      // valor total gasto = valor gasto + valor gasto atual
 
       stdout.writeln('O pagamento foi aprovado com sucesso!');
 

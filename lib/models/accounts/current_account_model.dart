@@ -13,10 +13,11 @@ class CurrentAccountModel extends AccountModel {
 
   double loan({required double inputLoan}) {
     balance += inputLoan;
-    // saldo (atual) = saldo + emprestimo
+
     CreditCardModel creditCard = card as CreditCardModel;
+    
     creditCard.amountSpent += inputLoan;
-    // valor gasto = valor + empréstimo
+  
     return balance;
 
   }

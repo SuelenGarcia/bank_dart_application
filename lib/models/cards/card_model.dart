@@ -1,4 +1,4 @@
-class CardModel {
+abstract class CardModel {
   String cardNumber;
   String flag;
   String cvv;

@@ -16,6 +16,5 @@ double creditCardLimit(double monthlyIncome) {
   }
   limit = limit.ceilToDouble();
   stdout.writeln('O seu limite é: R\$${limit.toStringAsFixed(2)}.');
-  stdout.writeln('CREDIT CARD LIMIT');
   return limit;
 }

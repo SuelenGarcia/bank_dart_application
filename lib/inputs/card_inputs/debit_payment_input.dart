@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:bank_dart_application/models/accounts/account_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
 import '../../helper/require_password.dart';
-import '../../validations/methods_validation.dart';
+import '../../validations/methods_input_validation.dart';
 
 void debitPaymentInput({
   required AccountModel accountModel,
@@ -32,7 +32,6 @@ void debitPaymentInput({
     requirePassword(userModel: userModel);
 
     double balance = accountModel.balance -= paymentValue!;
-    // saldo (atual) = saldo - valor gasto atual
 
     stdout.writeln('O pagamento foi aprovado com sucesso!');
     stdout.writeln('O seu saldo ficou no valor de R\$$balance.');

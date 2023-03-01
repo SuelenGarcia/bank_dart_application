@@ -28,7 +28,6 @@ void toLoan({
       userModel: userModel,
       accountModel: currentAccountModel,
     );
-    //loan = emprestimo aprovado inserido pelo usuario e adicionado a fatura do cartão
 
     requirePassword(userModel: userModel);
 

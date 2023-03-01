@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:bank_dart_application/models/users/user_model.dart';
 import '../account_inputs/choose_account_type.dart';
-import 'credit_card_model_input.dart';
-import 'debit_card_model_input.dart';
+import 'create_credit_card_model_input.dart';
+import 'create_debit_card_model_input.dart';
 
 void choosePaymentCardInput({required AccountType accountType, required UserModel userModel,}){
 
@@ -13,6 +13,6 @@ void choosePaymentCardInput({required AccountType accountType, required UserMode
   } else {
     stdout.writeln(
         'A conta corrente te possibilita ter um cartão com função de crédito e débito!');
-    createCreditCard(userModel: userModel,);
+    createCreditCard(userModel: userModel, limit: 0,);
   }
 }

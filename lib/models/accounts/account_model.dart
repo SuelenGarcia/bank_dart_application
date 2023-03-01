@@ -1,7 +1,7 @@
 import 'package:bank_dart_application/models/cards/card_model.dart';
 import 'package:bank_dart_application/models/users/user_model.dart';
 
-class AccountModel {
+abstract class AccountModel {
   UserModel user;
   String agency;
   String bank;
@@ -20,7 +20,6 @@ class AccountModel {
 
   double toWithdraw(double withdrawValue) {
     balance -= withdrawValue;
-    // saldo (atual) = saldo - saque
     return balance;
   }
 
